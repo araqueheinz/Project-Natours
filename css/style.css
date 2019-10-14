@@ -9,6 +9,7 @@ Dark green: #28b485
 
 :root {
   --white-primary: #ffffff;
+  --grey: #777;
   --light-green: #7ed56f;
   --light-green-op: hsla(111, 55%, 64%, 0.8);
   --medium-green: #55c57a;
@@ -36,6 +37,65 @@ body {
   padding: 30px;
 }
 
+/*  ///////////////////////////////////////////////
+   //          * BTN CONTROLS *            //
+  /////////////////////////////////////////////// */
+
+  .btn:link,
+  .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
+
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* Animation Initial State */
+    transition: all 0.4s;
+  }
+
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+
+  .btn-white {
+    background-color: var(--white-primary);
+    color: var(--grey);
+  }
+
+  .btn-white::after {
+    background-color: var(--white-primary);
+  }
+
+  .btn-animated {
+    /* Animation Properties */
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 
 /*  ///////////////////////////////////////////////
    //            * HEADER CONTROLS *            //
@@ -70,6 +130,7 @@ body {
 .text-box {
   /* Center the div */
   position: absolute;
+  text-align: center;
 
   /* Moving in relation to its parent */
   top: 40%;
@@ -82,6 +143,10 @@ body {
 .heading-primary {
   color: var(--white-primary);
   text-transform: uppercase;
+  margin-bottom: 60px;
+
+  /* FIX A WEIRD SHIFT IN THE ANIMATION */
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -89,11 +154,67 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
+  /* Animation Properties */
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
 }
 
 .heading-primary-sub {
   display: block;
   font-size: 20px;
   font-weight: 400;
-  letter-spacing: 15px;
+  letter-spacing: 17.4px;
+
+  /* Animation Properties */
+  animation: moveInRight 1s ease-out;
+}
+
+/*  ///////////////////////////////////////////////
+   //         * ANIMATIONS KEYFRAMES *          //
+  /////////////////////////////////////////////// */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+ 
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
