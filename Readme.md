@@ -3,3 +3,5 @@
 ## Summary
 Natours is a website for a fictional company that offers tours in the Nature.
 
+### Resources
+- Clip Images: https://bennettfeely.com/clippy/
