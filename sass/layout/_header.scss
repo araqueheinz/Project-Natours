@@ -1,0 +1,41 @@
+/*  ///////////////////////////////////////////////
+   //            * HEADER CONTROLS *            //
+  /////////////////////////////////////////////// */
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba($color-light-green, 0.7), rgba($color-dark-green, 0.7)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+
+  /* CLIP THE HEADER */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  
+  /*  ////// * Logo * ////// */
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+    /*  ////// * Hero Text Box * ////// */
+
+  &__text-box {
+    /* Center the div */
+    position: absolute;
+    text-align: center;
+  
+    /* Moving in relation to its parent */
+    top: 40%;
+    left: 50%;
+  
+    /* Moving in relation to itself */
+    transform: translate(-49%, -49%);
+  }
+}
