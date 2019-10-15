@@ -23,10 +23,9 @@ body {
   box-sizing: border-box; }
 
 /*  ///////////////////////////////////////////////
-   //          * BTN CONTROLS *            //
+   //          * BTN CONTROLS *                 //
   /////////////////////////////////////////////// */
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -39,6 +38,9 @@ body {
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.1rem);
@@ -57,16 +59,11 @@ body {
   /* Animation Initial State */
   transition: all 0.4s; }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
-
 .btn--white {
   background-color: #ffffff;
   color: #777; }
-
-.btn--white::after {
-  background-color: #ffffff; }
+  .btn--white::after {
+    background-color: #ffffff; }
 
 .btn--animated {
   /* Animation Properties */
@@ -77,58 +74,55 @@ body {
    //            * HEADER CONTROLS *            //
   /////////////////////////////////////////////// */
 .header {
+  position: relative;
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   /* CLIP THE HEADER */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-
-/*  ////// * Logo * ////// */
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
+  /*  ////// * Logo * ////// */
+  /*  ////// * Hero Text Box * ////// */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    /* Center the div */
+    position: absolute;
+    text-align: center;
+    /* Moving in relation to its parent */
+    top: 40%;
+    left: 50%;
+    /* Moving in relation to itself */
+    transform: translate(-49%, -49%); }
 
 /*  ////// * Headings * ////// */
-.header__text-box {
-  /* Center the div */
-  position: absolute;
-  text-align: center;
-  /* Moving in relation to its parent */
-  top: 40%;
-  left: 50%;
-  /* Moving in relation to itself */
-  transform: translate(-49%, -49%); }
-
 .heading-primary {
   color: #ffffff;
   text-transform: uppercase;
   margin-bottom: 6rem;
   /* FIX A WEIRD SHIFT IN THE ANIMATION */
-  backface-visibility: hidden; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  /* Animation Properties */
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.75rem;
-  /* Animation Properties */
-  animation: moveInRight 1s ease-out; }
+  backface-visibility: hidden;
+  /*  ////// * Hero Text * ////// */ }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /* Animation Properties */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    /* Animation Properties */
+    animation: moveInRight 1s ease-out; }
 
 /*  ///////////////////////////////////////////////
    //         * ANIMATIONS KEYFRAMES *          //
