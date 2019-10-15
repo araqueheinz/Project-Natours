@@ -95,16 +95,16 @@ body {
     opacity: 0;
   }
 
-  .btn-white {
+  .btn--white {
     background-color: var(--white-primary);
     color: var(--grey);
   }
 
-  .btn-white::after {
+  .btn--white::after {
     background-color: var(--white-primary);
   }
 
-  .btn-animated {
+  .btn--animated {
     /* Animation Properties */
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
@@ -128,19 +128,19 @@ body {
 
 /*  ////// * Logo * ////// */
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
 /*  ////// * Headings * ////// */
 
-.text-box {
+.header__text-box {
   /* Center the div */
   position: absolute;
   text-align: center;
@@ -162,7 +162,7 @@ body {
   backface-visibility: hidden;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -175,7 +175,7 @@ body {
 
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
