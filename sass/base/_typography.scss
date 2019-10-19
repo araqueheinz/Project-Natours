@@ -61,6 +61,8 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
+  
+  // Font gradient color
   display: inline-block;
   background-image: linear-gradient(to right, $color-light-green, $color-dark-green);
   -webkit-background-clip: text;
