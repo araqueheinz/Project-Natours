@@ -55,6 +55,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-light-green;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
   &--animated {
     /* Animation Properties */
     animation: moveInBottom 0.5s ease-out 0.75s;
