@@ -89,3 +89,4 @@ Is a CSS preprocessor, an extension of CSS that adds power and elegance to the b
 - Clip Images: https://bennettfeely.com/clippy/
 - https://github.com/linea-io/Linea-Iconset
 - https://unsplash.com/
+- https://coverr.co/
