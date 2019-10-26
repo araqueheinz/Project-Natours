@@ -13,7 +13,7 @@
     right: 6rem;
     z-index: 20;
 
-    box-shadow: o 1rem 3rem rgba($color-black, 0.2);
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
   }
 
   &__background {
@@ -25,21 +25,18 @@
     right: 6.5rem;
     background-image: radial-gradient($color-light-green, $color-dark-green);
     z-index: 18;
-
-    // transform: scale(100);
     transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+
   }
 
   &__nav {
     height: 100vh;
-    width: 0;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 19;
-
     opacity: 0;
-
+    width: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
@@ -47,11 +44,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-49%, -49%);
-
+    transform: translate(-50%,-50%);
     list-style: none;
     text-align: center;
-
+    width: 100%;
+    visibility: hidden;
   }
 
   &__item {
@@ -86,16 +83,20 @@
     &:hover {
       background-position: 100%;
       color: $color-light-green;
-      transform: translateX(1.5rem);
+      transform: translateX(1rem);
     }   
   }
 
   &__checkbox:checked ~ &__background {
-    transform: scale(100);
+    transform: scale(80);
   }
 
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+  }
+
+  &__checkbox:checked ~ &__nav &__list { 
+    visibility: visible;
   }
 }
