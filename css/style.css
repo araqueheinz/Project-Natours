@@ -634,8 +634,7 @@ body {
   left: 50%;
   transform: translate(-49%, -49%);
   list-style: none;
-  text-align: center;
-  width: 100vw; }
+  text-align: center; }
 
 .navigation__item {
   margin: 1rem; }
