@@ -91,6 +91,7 @@ Is a CSS preprocessor, an extension of CSS that adds power and elegance to the b
 - https://unsplash.com/
 - https://coverr.co/
 - https://easings.net/en
+- https://sizzy.co/
 
 ## Check it out
 [Natours](https://araqueheinz.github.io/Project-Natours/)
