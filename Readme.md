@@ -83,7 +83,10 @@ Is a CSS preprocessor, an extension of CSS that adds power and elegance to the b
 
 ## Dev Dependencies
 - `npm i node-sass --save-dev`
-
+- `npm i concat --save-dev`
+- `npm i autoprefixer --save-dev`
+  - `npm i postcss-cli --save-dev`
+- `npm i npm-run-all --save-dev`
 
 ### Resources
 - Clip Images: https://bennettfeely.com/clippy/

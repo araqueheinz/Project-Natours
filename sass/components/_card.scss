@@ -14,7 +14,11 @@
     top: 0;
     left: 0;
     width: 100%;
+
+    // ADDING PREFIX TO SUPPORT FUNCTIONALITY ON SAFARI OR OTHER BROWSERS
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+  
     border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15rem);
