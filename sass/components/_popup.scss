@@ -7,10 +7,18 @@
   background-color: rgba($color-black, 0.8);
   z-index: 10000;
 
-  
+
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
+
+  /* IMPLEMENT DIFFERENT BROWSER FEATURES DEPENDING ON IF THE BROWSER SUPPORTS IT */
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, .3);
+  }
+  /* IMPLEMENT DIFFERENT BROWSER FEATURES DEPENDING ON IF THE BROWSER SUPPORTS IT */
 
   &__content {
     @include absCenter;
