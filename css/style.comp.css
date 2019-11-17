@@ -590,6 +590,8 @@ body {
   opacity: 1; }
 
 .popup {
+  opacity: 0;
+  visibility: hidden;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -597,8 +599,7 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10000;
-  opacity: 0;
-  visibility: hidden;
+  overflow: hidden;
   transition: all 0.5s; }
   .popup__content {
     position: absolute;
